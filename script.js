@@ -28,11 +28,11 @@ var spatiebalk = 32;
  */
 var beweegAlles = function () {
   if(keyIsDown(beweeglinks)){
-   spelerX = spelerX + 10;
+   spelerX = spelerX - 10;
   }
 
   if(keyIsDown(beweegrechts)){
-    spelerX = spelerX - 10;
+    spelerX = spelerX + 10;
   }//speler
   
   /*

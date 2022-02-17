@@ -16,7 +16,9 @@ var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
-
+var beweeglinks = 65;
+var beweegrechts = 68;
+var spatiebalk = 32;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -25,8 +27,19 @@ var spelerY = 600; // y-positie van speler
  * Updatet globale variabelen met posities van speler, vijanden en kogels
  */
 var beweegAlles = function () {
-  // speler
+  if(keyIsDown(beweeglinks)){
+   spelerX = spelerX + 10;
+  }
 
+  if(keyIsDown(beweegrechts)){
+    spelerX = spelerX - 10;
+  }//speler
+  
+  /*
+if(keyIsDown(spatiebalk)){
+    spelerY = spelerY - 10;
+  }*/
+  
   // vijand
 
   // kogel
@@ -89,7 +102,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  
 }
 
 /**
@@ -99,6 +112,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
+    background('blue');
     beweegAlles();
     verwerkBotsing();
     tekenAlles();

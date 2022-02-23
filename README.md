@@ -21,27 +21,42 @@ Basis: uitleg, spelen, afgaan en punten
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
-- [ ] 4. *(pas de volgende stappen in de planning zelf aan)*
-- [ ] x. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
-- [ ] x. teken een bal, kogel (als die in je spel zit)
-- [ ] x. beweeg de tegenspeler of je bal
-- [ ] x. zet punten op het scherm 
-- [ ] x. zorg dat je punten kunt scoren
-- [ ] x. zorg dat je af kunt
-- [ ] x. maak game-over-scherm
+- [x] 4.
+  *(pas de volgende stappen in de planning zelf aan)*
+- [ ] x. teken een simpel level
+- ondergrond
+- finish
+- [ ] x. teken een blokje
+- [ ] x. het blokje kunnen verzamelen
+- [ ] x. voeg platform toe
+- [ ] x. zorg dat de speler kan springen
+- voeg gravity toe
+- zorg dat hij niet verder valt dan het platform, maar er op blijft
+- [ ] x. maak de finish werkend
+- [ ] x. maak een "you won" scherm
 - [ ] x. maak uitlegscherm
+- [ ] x. maak het level moeilijker
 
-### Uitbreidingen 1
-Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+Mogelijk:
 
-### Uitbreidingen 2
-Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+- [ ] x. meerdere levels
+- [ ] x. teken eventueel een nieuw level als de ander gehaald is
+- [ ] x. animeer speler
+- [ ] x. animeer vijand
+- [ ] x. voeg plaatje toe voor verzamel blokjes
+- [ ] x. voeg plaatje toe wapen
+- [ ] x. voeg achtegrond toe
+
+### Uitbreidingen 1: tegenstanders
+- [ ] voeg tegenstanders toe
+- [ ] laat tegenstanders bewegen
+- [ ] laat de speler af gaan door vijand
+- [ ] maak "game over" scherm
+
+### Uitbreidingen 2: wapen
+- [ ] voeg een wapen toe
+- [ ] zorg dat als het wapen de vijand raakt de vijand verdwijnt
+- [ ] 
 
 ### Ideeen voor uitbreidingen
 Kies de uitbreidingen die je leuk vindt en maak je game nog mooier

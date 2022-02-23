@@ -15,7 +15,7 @@ const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
-var spelerY = 600; // y-positie van speler
+var spelerY = 550; // y-positie van speler
 var beweeglinks = 65;
 var beweegrechts = 68;
 var spatiebalk = 32;
@@ -63,7 +63,6 @@ var verwerkBotsing = function () {
  * Tekent spelscherm
  */
 var tekenAlles = function () {
-  // achtergrond
 
   // vijand
 
@@ -71,10 +70,11 @@ var tekenAlles = function () {
 
   // speler
   fill("white");
-  rect(spelerX - 25, spelerY - 25, 50, 50);
-  fill("black");
-  ellipse(spelerX, spelerY, 10, 10);
+  rect(spelerX - 25, spelerY - 25, 50, 100);
 
+fill("black");
+  ellipse(spelerX, spelerY + 75, 10, 10);
+  
   // punten en health
 
 };

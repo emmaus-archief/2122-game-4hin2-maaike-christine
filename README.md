@@ -23,30 +23,30 @@ Basis: uitleg, spelen, afgaan en punten
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [x] 4.
   *(pas de volgende stappen in de planning zelf aan)*
-- [ ] x. iets wat je kan verzamlene tekenen
-- [ ] x. teken een simpel level
-- ondergrond
-- finish
+- [ ] x. iets wat je kan verzamelen tekenen
+- [ ] x. vijand tekenen
+- [ ] x. teken platform
 - [ ] x. teken een blokje
-- [ ] x. het blokje kunnen verzamelen
-- [ ] x. voeg platform toe
+- [ ] x. teken finish
+- [ ] x. teken dingen waar je af van gaat
+- lava
+- stekels
+- [ ] x. ondergrond van het level tekenen
+- [ ] x. achtergrond tekenen
 - [ ] x. zorg dat de speler kan springen
 - voeg gravity toe
 - zorg dat hij niet verder valt dan het platform, maar er op blijft
 - [ ] x. maak de finish werkend
 - [ ] x. maak een "you won" scherm
 - [ ] x. maak uitlegscherm
-- [ ] x. maak het level moeilijker
+- [ ] x. kleuren toevoegen
+- [ ] x. zorgen dat je af kan gaan
+- [ ] x. game over
+- [ ] x. een nieuwe draw function zodat het nieuwe level getekend wordt
 
 Mogelijk:
 
-- [ ] x. meerdere levels
-- [ ] x. teken eventueel een nieuw level als de ander gehaald is
-- [ ] x. animeer speler
-- [ ] x. animeer vijand
-- [ ] x. voeg plaatje toe voor verzamel blokjes
-- [ ] x. voeg plaatje toe wapen
-- [ ] x. voeg achtegrond toe
+- [ ] x. animeer dingen
 
 ### Uitbreidingen 1: tegenstanders
 - [ ] voeg tegenstanders toe

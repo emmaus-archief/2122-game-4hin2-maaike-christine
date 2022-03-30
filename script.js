@@ -63,7 +63,7 @@ var verwerkBotsing = function () {
  * Tekent spelscherm
  */
 var tekenAlles = function () {
-
+  rect
   // vijand
 
   // kogel
@@ -112,7 +112,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
-    background('blue');
+    background: rgb(178, 217, 255);
     beweegAlles();
     verwerkBotsing();
     tekenAlles();

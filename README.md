@@ -23,6 +23,7 @@ Basis: uitleg, spelen, afgaan en punten
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [x] 4.
   *(pas de volgende stappen in de planning zelf aan)*
+- [ ] x. iets wat je kan verzamlene tekenen
 - [ ] x. teken een simpel level
 - ondergrond
 - finish

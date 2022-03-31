@@ -112,7 +112,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
-    background: rgb(178, 217, 255);
+    background(178, 217, 255)
     beweegAlles();
     verwerkBotsing();
     tekenAlles();

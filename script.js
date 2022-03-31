@@ -63,7 +63,9 @@ var verwerkBotsing = function () {
  * Tekent spelscherm
  */
 var tekenAlles = function () {
-  rect
+  // achtergrond
+  // GEE: TEKEN HIER DE ACHTERGROND
+  
   // vijand
 
   // kogel
@@ -76,7 +78,7 @@ var tekenAlles = function () {
   ellipse(spelerX, spelerY + 75, 10, 10);
   
   // punten en health
-  fill("yellow")
+  fill("yellow");
   ellipse( 500, 400, 20, 20);    
 };
 
@@ -98,12 +100,12 @@ var checkGameOver = function () {
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
-function setup() {
+function setup() { // GEE:IN DEZE FUNCTIE HOEF JE NIKS AAN TE PASSEN
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-   fill(178, 217, 255);
+   fill(178, 217, 255); 
    rect( 0, 0, 1280, 720);
 }
 
@@ -114,7 +116,8 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
-    background();
+    //background(); GEE: DEZE REGEL MOET WEG
+    tekenAlles(); // GEE: DEZE REGEL MOEST NIET WEG
     beweegAlles();
     verwerkBotsing();
     tekenAlles();

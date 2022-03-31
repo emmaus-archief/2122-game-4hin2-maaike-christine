@@ -1,4 +1,4 @@
-dadd/* Game opdracht
+/* Game opdracht
    Informatica - Emmauscollege Rotterdam
    Template voor een game in JavaScript met de p5 library
 
@@ -72,11 +72,12 @@ var tekenAlles = function () {
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 100);
 
-fill("black");
+  fill("black");
   ellipse(spelerX, spelerY + 75, 10, 10);
   
   // punten en health
-
+  fill("yellow")
+  ellipse( 500, 400, 20, 20);    
 };
 
 /**
@@ -102,7 +103,8 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  
+   fill(178, 217, 255);
+   rect( 0, 0, 1280, 720);
 }
 
 /**
@@ -112,7 +114,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
-    background(178, 217, 255)
+    background();
     beweegAlles();
     verwerkBotsing();
     tekenAlles();

@@ -19,6 +19,8 @@ var spelerY = 550; // y-positie van speler
 var beweeglinks = 65;
 var beweegrechts = 68;
 var spatiebalk = 32;
+
+/*var img = */
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -68,9 +70,12 @@ var tekenAlles = function () {
   fill(178, 217, 255);
   rect(0,0,1280,720);
   
+  // platform
+  fill(119, 79, 39);
+  rect(0, 600, 200, 125);
+  fill(79, 107, 24);
+  rect(0, 600, 200, 30);
   // vijand
-
-  // kogel
 
   // speler
   fill("white");
@@ -102,13 +107,10 @@ var checkGameOver = function () {
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
-function setup() { // GEE:IN DEZE FUNCTIE HOEF JE NIKS AAN TE PASSEN
+function setup() { 
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
-
-  // Kleur de achtergrond blauw, zodat je het kunt zien
-   fill(178, 217, 255); 
-   rect( 0, 0, 1280, 720);
+   
 }
 
 /**
@@ -118,8 +120,7 @@ function setup() { // GEE:IN DEZE FUNCTIE HOEF JE NIKS AAN TE PASSEN
  */
 function draw() {
   if (spelStatus === SPELEN) {
-    //background(); GEE: DEZE REGEL MOET WEG
-    tekenAlles(); // GEE: DEZE REGEL MOEST NIET WEG
+    tekenAlles(); 
     beweegAlles();
     verwerkBotsing();
     tekenAlles();

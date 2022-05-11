@@ -13,7 +13,7 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
-
+/*var vijandX = */
 var spelerX = 600; // x-positie van speler
 var spelerY = 550; // y-positie van speler
 var beweeglinks = 65;
@@ -52,7 +52,7 @@ if(keyIsDown(spatiebalk)){
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-
+/* if(spelerX-vijand
   // botsing kogel tegen vijand
 
   // update punten en health

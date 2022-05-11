@@ -52,7 +52,8 @@ if(keyIsDown(spatiebalk)){
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-/* if(spelerX-vijand
+// if(spelerX - vijandX < 50 && vijandX - vijandY < 50 && spelerY - vijandY < 50 && vijandY - spelerY < 50) 
+    //console.log ("botsing")
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -64,7 +65,8 @@ var verwerkBotsing = function () {
  */
 var tekenAlles = function () {
   // achtergrond
-  // GEE: TEKEN HIER DE ACHTERGROND
+  fill(178, 217, 255);
+  rect(0,0,1280,720);d
   
   // vijand
 

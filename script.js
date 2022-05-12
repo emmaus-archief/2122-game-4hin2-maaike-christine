@@ -10,15 +10,24 @@
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
+
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
+
+const beweeglinks = 65;
+const beweegrechts = 68;
+const spatiebalk = 32;
+
 /*var vijandX = */
-var spelerX = 600; // x-positie van speler
-var spelerY = 550; // y-positie van speler
-var beweeglinks = 65;
-var beweegrechts = 68;
-var spatiebalk = 32;
+var spelerX = 30; // x-positie van speler
+var spelerY = 525; // y-positie van speler
+
+platform1X = 100;
+platform1Y = 600;
+platform1W = 200;
+platform1H = 10;
+
 
 /*var img = */
 /* ********************************************* */
@@ -72,9 +81,13 @@ var tekenAlles = function () {
   
   // platform
   fill(119, 79, 39);
-  rect(0, 600, 200, 125);
+  rect(0, 600, platform1W, 125);
   fill(79, 107, 24);
-  rect(0, 600, 200, 30);
+  rect(0, 600, platform1W, 30);
+  
+  var x = 100
+  var y = 100
+ 
   // vijand
 
   // speler

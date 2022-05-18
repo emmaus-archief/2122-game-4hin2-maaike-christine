@@ -25,10 +25,10 @@ var spelerY = 525; // y-positie van speler
 /* var spelerSpringt = false;
    var snelheid = 10; */
 
-platform1X = 100;
+platform1X = 0;
 platform1Y = 600;
 platform1W = 200;
-platform1H = 10;
+platform1H = 125;
 
 
 /*var img = */
@@ -98,7 +98,7 @@ var tekenAlles = function () {
   
   // platform
   fill(119, 79, 39);
-  rect(0, 600, platform1W, 125);
+  rect(platform1X, platform1Y, platform1W, platform1H);
   fill(79, 107, 24);
   rect(0, 600, platform1W, 30);
   

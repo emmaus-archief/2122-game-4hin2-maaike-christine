@@ -19,9 +19,11 @@ const beweeglinks = 65;
 const beweegrechts = 68;
 const spatiebalk = 32;
 
-/*var vijandX = */
+/* var vijandX = */
 var spelerX = 30; // x-positie van speler
 var spelerY = 525; // y-positie van speler
+/* var spelerSpringt = false;
+   var snelheid = 10; */
 
 platform1X = 100;
 platform1Y = 600;
@@ -38,18 +40,33 @@ platform1H = 10;
  * Updatet globale variabelen met posities van speler, vijanden en kogels
  */
 var beweegAlles = function () {
+  // speler lopen
   if(keyIsDown(beweeglinks)){
    spelerX = spelerX - 10;
   }
 
   if(keyIsDown(beweegrechts)){
     spelerX = spelerX + 10;
-  }//speler
-  
-  /*
-if(keyIsDown(spatiebalk)){
-    spelerY = spelerY - 10;
-  }*/
+  }
+ /*
+
+  // speler springen
+if (spelerSpringt === false && keyIsDown(32)) { // spatie
+    snelheid = 10; 
+    spelerSpringt = true;
+}
+if (spelerspringt === true) {
+  spelerY = spelerY - snelheid;
+  snelheid = snelheid - 0,1;
+}
+  // stopt
+  if (spelerSpringt === true && spelerY > 610) {
+    spelerSpringt = false;
+    spelerY = 600;
+    
+  }
+
+  */
   
   // vijand
 

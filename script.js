@@ -17,6 +17,7 @@ var spelStatus = SPELEN;
 
 const beweeglinks = 65;
 const beweegrechts = 68;
+const beweegonder = 83;
 const spatiebalk = 32;
 
 /* var vijandX = */
@@ -47,6 +48,10 @@ var beweegAlles = function () {
 
   if(keyIsDown(beweegrechts)){
     spelerX = spelerX + 10;
+  }
+
+  if(keyIsDown(beweegonder)){
+    spelerY = spelerY + 10;
   }
  /*
 
@@ -80,8 +85,10 @@ if (spelerspringt === true) {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-// if(spelerX - vijandX < 50 && vijandX - vijandY < 50 && spelerY - vijandY < 50 && vijandY - spelerY < 50) 
-    //console.log ("botsing")
+   if (spelerY > 650) { 
+   console.log ("botsing"); 
+}
+
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -115,8 +122,9 @@ var tekenAlles = function () {
   ellipse(spelerX, spelerY + 75, 10, 10);
   
   // punten en health
+  /*
   fill("yellow");
-  ellipse( 500, 400, 20, 20);    
+  ellipse( 500, 400, 20, 20); */   
 };
 
 /**

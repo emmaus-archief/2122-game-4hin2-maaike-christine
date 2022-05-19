@@ -22,9 +22,9 @@ const spatiebalk = 32;
 /* var vijandX = */
 var spelerX = 30; // x-positie van speler
 var spelerY = 525; // y-positie van speler
-/*
+
 var spelerSpringt = false;
-var snelheid = 10; */
+var snelheid = 10; 
 
 platform1X = 0;
 platform1Y = 600;
@@ -73,23 +73,25 @@ var beweegAlles = function () {
   }
 
  
-/*
+
   // speler springen
 if (spelerSpringt === false && keyIsDown(32)) { // spatie
-    snelheid = 5; 
+    snelheid = 10; 
     spelerSpringt = true;
 }
 if (spelerSpringt === true) {
   spelerY = spelerY - snelheid;
-  snelheid = snelheid - 0,1;
+  snelheid = snelheid - 0.1;
 }
   // stopt
-  if (spelerSpringt === true && spelerY > 610) {
+  if (spelerSpringt === true && 
+      spelerY > platform2Y - 75 && spelerY < platform2Y - 55 && 
+      spelerX > 300 && spelerX < 425) {
     spelerSpringt = false;
-    spelerY = 600;
-    
+    spelerY = platform2Y - 75; // set speler bovenop platform
+
   }
-*/
+
   
   
   // vijand

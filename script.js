@@ -25,12 +25,12 @@ var spelerY = 525; // y-positie van speler
 
 var spelerSpringt = false;
 var snelheid = 10; 
-
+//gras platform
 platform1X = 0;
 platform1Y = 600;
 platform1W = 200;
 platform1H = 125;
-
+//grijze
 platform2X = 300;
 platform2Y = 500;
 platform2W = 125;
@@ -48,7 +48,7 @@ platform5Y = 390;
 
 platform6X = 850;
 platform6Y = 500;
-
+//gras platform
 platform7X = 1080;
 platform7Y = 600;
 
@@ -76,7 +76,7 @@ var beweegAlles = function () {
 
   // speler springen
 if (spelerSpringt === false && keyIsDown(32)) { // spatie
-    snelheid = 10; 
+    snelheid = 8; 
     spelerSpringt = true;
 }
 if (spelerSpringt === true) {
@@ -86,14 +86,51 @@ if (spelerSpringt === true) {
   // stopt
   if (spelerSpringt === true && 
       spelerY > platform2Y - 75 && spelerY < platform2Y - 55 && 
-      spelerX > 300 && spelerX < 425) {
+      spelerX > platform2X && spelerX < platform2X + 125) {
     spelerSpringt = false;
     spelerY = platform2Y - 75; // set speler bovenop platform
 
   }
 
-  
-  
+  if (spelerSpringt === true && 
+      spelerY > platform3Y - 75 && spelerY < platform3Y - 55 && 
+      spelerX > platform3X && spelerX < platform3X + 125) {
+    spelerSpringt = false;
+    spelerY = platform3Y - 75; // set speler bovenop platform
+
+  }
+
+  if (spelerSpringt === true && 
+      spelerY > platform4Y - 75 && spelerY < platform4Y - 55 && 
+      spelerX > platform4X && spelerX < platform4X + 125) {
+    spelerSpringt = false;
+    spelerY = platform4Y - 75; // set speler bovenop platform
+
+  }
+
+  if (spelerSpringt === true && 
+      spelerY > platform5Y - 75 && spelerY < platform5Y - 55 && 
+      spelerX > platform5X && spelerX < platform5X + 125) {
+    spelerSpringt = false;
+    spelerY = platform5Y - 75; // set speler bovenop platform
+
+  }
+
+  if (spelerSpringt === true && 
+      spelerY > platform6Y - 75 && spelerY < platform6Y - 55 && 
+      spelerX > platform6X && spelerX < platform6X + 125) {
+    spelerSpringt = false;
+    spelerY = platform6Y - 75; // set speler bovenop platform
+
+  }
+
+  if (spelerSpringt === true && 
+      spelerY > platform7Y - 75 && spelerY < platform7Y + 125 && 
+      spelerX > platform7X && spelerX < platform7X + 200) {
+    spelerSpringt = false;
+    spelerY = platform7Y - 75; // set speler bovenop platform
+
+  }
   // vijand
 
   // kogel

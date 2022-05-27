@@ -24,7 +24,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] 4.
   *(pas de volgende stappen in de planning zelf aan)*
 - [x] x. iets wat je kan verzamelen tekenen
-- [x] x. teken platform
+- [ ] x. teken platform
 - [ ] x. teken vijand
 - [ ] x. teken finish
 - [ ] x. teken dingen waar je af van gaat
@@ -32,7 +32,7 @@ Basis: uitleg, spelen, afgaan en punten
 - stekels
 - [ ] x. ondergrond van het level tekenen
 - [ ] x. achtergrond tekenen
-- [x] x. zorg dat de speler kan springen
+- [ ] x. zorg dat de speler kan springen
 - voeg gravity toe
 - zorg dat hij niet verder valt dan het platform, maar er op blijft
 - [ ] x. maak de finish werkend

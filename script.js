@@ -81,14 +81,14 @@ if (spelerSpringt === false && keyIsDown(32)) { // spatie
 }
 if (spelerSpringt === true) {
   spelerY = spelerY - snelheid;
-  snelheid = snelheid - 0.2;
+  snelheid = snelheid - 0.1;
 }
   // stopt
   if (spelerSpringt === true && 
       spelerY > platform2Y - 75 && spelerY < platform2Y - 55 && 
       spelerX > platform2X && spelerX < platform2X + 125) {
     spelerSpringt = false;
-    spelerY = platform2Y - 75; // zet speler bovenop platform
+    spelerY = platform2Y - 75; // set speler bovenop platform
 
   }
 
@@ -96,7 +96,7 @@ if (spelerSpringt === true) {
       spelerY > platform3Y - 75 && spelerY < platform3Y - 55 && 
       spelerX > platform3X && spelerX < platform3X + 125) {
     spelerSpringt = false;
-    spelerY = platform3Y - 75; // zet speler bovenop platform
+    spelerY = platform3Y - 75; // set speler bovenop platform
 
   }
 
@@ -104,7 +104,7 @@ if (spelerSpringt === true) {
       spelerY > platform4Y - 75 && spelerY < platform4Y - 55 && 
       spelerX > platform4X && spelerX < platform4X + 125) {
     spelerSpringt = false;
-    spelerY = platform4Y - 75; // zet speler bovenop platform
+    spelerY = platform4Y - 75; // set speler bovenop platform
 
   }
 
@@ -112,7 +112,7 @@ if (spelerSpringt === true) {
       spelerY > platform5Y - 75 && spelerY < platform5Y - 55 && 
       spelerX > platform5X && spelerX < platform5X + 125) {
     spelerSpringt = false;
-    spelerY = platform5Y - 75; // zet speler bovenop platform
+    spelerY = platform5Y - 75; // set speler bovenop platform
 
   }
 
@@ -120,7 +120,7 @@ if (spelerSpringt === true) {
       spelerY > platform6Y - 75 && spelerY < platform6Y - 55 && 
       spelerX > platform6X && spelerX < platform6X + 125) {
     spelerSpringt = false;
-    spelerY = platform6Y - 75; // zet speler bovenop platform
+    spelerY = platform6Y - 75; // set speler bovenop platform
 
   }
 
@@ -128,7 +128,7 @@ if (spelerSpringt === true) {
       spelerY > platform7Y - 75 && spelerY < platform7Y + 125 && 
       spelerX > platform7X && spelerX < platform7X + 200) {
     spelerSpringt = false;
-    spelerY = platform7Y - 75; // zet speler bovenop platform
+    spelerY = platform7Y - 75; // set speler bovenop platform
 
   }
   // vijand
@@ -209,12 +209,9 @@ var tekenAlles = function () {
  * anders return false
  */
 var checkGameOver = function () {
-  if (spelerY > 650);{
-    return true;
-  }
-  
+  // check of HP 0 is , of tijd op is, of ...
   return false;
-  };
+};
 
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
@@ -246,13 +243,8 @@ function draw() {
       spelStatus = GAMEOVER;
     }
   }
-  /*
-    if (spelStatus === GAMEOVER) {
-    fill("black");
-    rect(0,0,1280,720);
-    textSize(50);
-    fill('white');
-    text("game-over", 500, 500);
+  if (spelStatus === GAMEOVER) {
+    // teken game-over scherm
+
   }
-  */
 }

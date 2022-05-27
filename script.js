@@ -76,12 +76,12 @@ var beweegAlles = function () {
 
   // speler springen
 if (spelerSpringt === false && keyIsDown(32)) { // spatie
-    snelheid = 8; 
+    snelheid = 6; 
     spelerSpringt = true;
 }
 if (spelerSpringt === true) {
   spelerY = spelerY - snelheid;
-  snelheid = snelheid - 0.1;
+  snelheid = snelheid - 0.15;
 }
   // stopt
   if (spelerSpringt === true && 
@@ -245,6 +245,6 @@ function draw() {
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm zwart
-
+  
   }
 }

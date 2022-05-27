@@ -244,7 +244,7 @@ function draw() {
     }
   }
   if (spelStatus === GAMEOVER) {
-    // teken game-over scherm
+    // teken game-over scherm zwart
 
   }
 }

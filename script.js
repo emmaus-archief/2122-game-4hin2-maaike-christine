@@ -13,11 +13,14 @@
 
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 3;
 var spelStatus = SPELEN;
 
 const beweeglinks = 65;
 const beweegrechts = 68;
 const spatiebalk = 32;
+const R = 82;
+const enter = 13;
 
 /* var vijandX = */
 var spelerX = 30; // x-positie van speler
@@ -25,6 +28,9 @@ var spelerY = 525; // y-positie van speler
 
 var spelerSpringt = false;
 var snelheid = 10; 
+
+var img; // plaatje
+
 //gras platform
 platform1X = 0;
 platform1Y = 600;
@@ -143,9 +149,6 @@ if (spelerSpringt === true) {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-   if (spelerY > 650) { 
-   console.log ("botsing"); 
-}
 
   // botsing kogel tegen vijand
 
@@ -209,6 +212,10 @@ var tekenAlles = function () {
  * anders return false
  */
 var checkGameOver = function () {
+   if (spelerY > 650) { 
+   console.log ("botsing")
+   return true;
+}
   // check of HP 0 is , of tijd op is, of ...
   return false;
 };
@@ -216,6 +223,15 @@ var checkGameOver = function () {
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
 /* ********************************************* */
+
+/**
+ * preload
+ * deze functie wordt één keer uitgevoerd voor setup
+ * hier laden we de plaatjes
+ */
+function preload() {
+  img = loadImage('gameover.PNG');
+}
 
 /**
  * setup
@@ -245,6 +261,18 @@ function draw() {
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm zwart
-  
+     console.log("game over")
+     image(img,0,0, 1280, 720);
+  }
+  }
+/*
+  if (spelStatus === UITLEG) {
+    // teken uitleg scherm zwart
+     console.log("uitleg")
+    image(img,0,0, 1280, 720)
+    if(keyIsDown(enter)){
+     spelerX = 30;
+     spelStatus = SPELEN;
   }
 }
+  */

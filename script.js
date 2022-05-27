@@ -209,9 +209,12 @@ var tekenAlles = function () {
  * anders return false
  */
 var checkGameOver = function () {
-  // check of HP 0 is , of tijd op is, of ...
+  if (spelerY > 650);{
+    return true;
+  }
+  
   return false;
-};
+  };
 
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
@@ -243,8 +246,13 @@ function draw() {
       spelStatus = GAMEOVER;
     }
   }
-  if (spelStatus === GAMEOVER) {
-    // teken game-over scherm
-
+  /*
+    if (spelStatus === GAMEOVER) {
+    fill("black");
+    rect(0,0,1280,720);
+    textSize(50);
+    fill('white');
+    text("game-over", 500, 500);
   }
+  */
 }

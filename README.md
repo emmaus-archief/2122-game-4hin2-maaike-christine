@@ -24,22 +24,20 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] 4.
   *(pas de volgende stappen in de planning zelf aan)*
 - [x] x. iets wat je kan verzamelen tekenen
-- [ ] x. teken platform
+- [x] x. teken platform
 - [ ] x. teken vijand
+- miss dingen die uit de lucht vallen
 - [ ] x. teken finish
-- [ ] x. teken dingen waar je af van gaat
-- lava
-- stekels
-- [ ] x. ondergrond van het level tekenen
-- [ ] x. achtergrond tekenen
-- [ ] x. zorg dat de speler kan springen
+- [x] x. ondergrond van het level tekenen
+- [x] x. achtergrond tekenen
+- [x] x. zorg dat de speler kan springen
 - voeg gravity toe
 - zorg dat hij niet verder valt dan het platform, maar er op blijft
 - [ ] x. maak de finish werkend
 - [ ] x. maak een "you won" scherm
 - [ ] x. maak uitlegscherm
 - [ ] x. kleuren toevoegen
-- [ ] x. zorgen dat je af kan gaan
+- [x] x. zorgen dat je af kan gaan
 - [ ] x. game over
 - [ ] x. een nieuwe draw function zodat het nieuwe level getekend wordt
 

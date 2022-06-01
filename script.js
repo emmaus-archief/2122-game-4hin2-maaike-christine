@@ -1,4 +1,4 @@
-/* Game opdracht
+ /* Game opdracht
    Informatica - Emmauscollege Rotterdam
    Template voor een game in JavaScript met de p5 library
 
@@ -22,14 +22,16 @@ const spatiebalk = 32;
 const R = 82;
 const enter = 13;
 
-/* var vijandX = */
+var vijandX = 0;
+var vijandY = 0;
 var spelerX = 30; // x-positie van speler
 var spelerY = 525; // y-positie van speler
 
 var spelerSpringt = false;
 var snelheid = 10; 
 
-var img = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
+var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
+var img_lijst =[]; // wordt gevuld in preload()
 
 //gras platform
 platform1X = 0;
@@ -145,6 +147,7 @@ if (spelerSpringt === true &&
     spelerY = platform7Y - 75; // zet speler bovenop platform
 
   }
+  
   // vijand
 
   // kogel
@@ -201,7 +204,7 @@ var tekenAlles = function () {
 
   
   // vijand
-
+  
   // speler
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 100);
@@ -238,11 +241,10 @@ var checkGameOver = function () {
  * hier laden we de plaatjes
  */
 function preload() {
-  var image = new Image();
-  for (var i = 0; i < img.length; i++)
-      image.src = img[i];
+  for (var i = 0; i < img_namenlijst.length; i++) {
+    img_lijst[i] = loadImage(img_namenlijst[i]);
+  }
 }
-
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -272,7 +274,7 @@ function draw() {
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm zwart
      console.log("game over")
-     image(img[0],0,0, 1280, 720);
+     image(img_lijst[0],0,0, 1280, 720);
     if(keyIsDown(R)) {
       spelerX = 25;
       spelerY = 500;

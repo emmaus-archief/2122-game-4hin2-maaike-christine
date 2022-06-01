@@ -33,6 +33,7 @@ var snelheid = 10;
 var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
+var vijand = ["vijand1", "vijand2", "vijand3"]
 //gras platform
 platform1X = 0;
 platform1Y = 600;
@@ -204,7 +205,9 @@ var tekenAlles = function () {
 
   
   // vijand
-  
+
+  fill("red");
+  ellipse(300, 25, 20, 20)
   // speler
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 100);

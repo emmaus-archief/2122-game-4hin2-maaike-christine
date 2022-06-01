@@ -286,7 +286,7 @@ function draw() {
   if (spelStatus === UITLEG) {
     // teken uitleg scherm zwart
      console.log("uitleg")
-    image(img,0,0, 1280, 720)
+    image(img_lijst[1],0,0, 1280, 720)
     if(keyIsDown(enter)){
      spelerX = 30;
      spelStatus = SPELEN;

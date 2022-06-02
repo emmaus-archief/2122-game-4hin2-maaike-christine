@@ -153,9 +153,12 @@ if (spelerSpringt === true &&
 vijandY = vijandY + 10;
 
   if (vijandY > 720) {
-    vijandY
+    vijandY = 0;
   }
-  
+
+  if (vijandY < 1)
+  {vijandX = random(100, 700)
+  };
   // kogel
 };
 

@@ -14,7 +14,7 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 const UITLEG = 3;
-var spelStatus = SPELEN;
+var spelStatus = UITLEG;
 
 const beweeglinks = 65;
 const beweegrechts = 68;
@@ -33,7 +33,6 @@ var snelheid = 10;
 var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
-var vijand = ["vijand1", "vijand2", "vijand3"]
 //gras platform
 platform1X = 0;
 platform1Y = 600;
@@ -151,6 +150,12 @@ if (spelerSpringt === true &&
   
   // vijand
 
+vijandY = vijandY + 10;
+
+  if (vijandY > 720) {
+    vijandY
+  }
+  
   // kogel
 };
 
@@ -207,7 +212,7 @@ var tekenAlles = function () {
   // vijand
 
   fill("red");
-  ellipse(300, 25, 20, 20)
+  ellipse(300, 25, 25, 25)
   // speler
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 100);
@@ -274,6 +279,7 @@ function draw() {
       spelStatus = GAMEOVER;
     }
   }
+  
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm zwart
      console.log("game over")
@@ -281,11 +287,9 @@ function draw() {
     if(keyIsDown(R)) {
       spelerX = 25;
       spelerY = 500;
-      spelStatus = SPELEN;
+      spelStatus = UITLEG;
     }
   }
-  }
-/*
   if (spelStatus === UITLEG) {
     // teken uitleg scherm zwart
      console.log("uitleg")
@@ -295,4 +299,4 @@ function draw() {
      spelStatus = SPELEN;
   }
 }
-  */
+}

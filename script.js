@@ -1,4 +1,5 @@
- /* Game opdracht
+
+/* Game opdracht
    Informatica - Emmauscollege Rotterdam
    Template voor een game in JavaScript met de p5 library
 
@@ -22,8 +23,8 @@ const spatiebalk = 32;
 const R = 82;
 const enter = 13;
 
-var vijandX = 0;
-var vijandY = 0;
+var vijandX = 600;
+var vijandY = 200;
 var spelerX = 30; // x-positie van speler
 var spelerY = 525; // y-positie van speler
 
@@ -32,6 +33,8 @@ var snelheid = 10;
 
 var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
+
+var HP = 10;
 
 //gras platform
 platform1X = 0;
@@ -62,7 +65,7 @@ platform7Y = 600;
 
  
 
-/*var img = */
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -80,8 +83,6 @@ var beweegAlles = function () {
     spelerX = spelerX + 10;
   }
 
- 
-
   // speler springen
 if (spelerSpringt === false && keyIsDown(32)) { // spatie
     snelheid = 6; 
@@ -91,7 +92,7 @@ if (spelerSpringt === true) {
   spelerY = spelerY - snelheid;
   snelheid = snelheid - 0.15;
 }
-  // stopt
+  // stopt springen
 if (spelerSpringt === true && 
       spelerY > platform1Y - 75 && spelerY < platform1Y + 125  && 
       spelerX > platform1X && spelerX < platform1X + 200) {
@@ -150,14 +151,14 @@ if (spelerSpringt === true &&
   
   // vijand
 
-vijandY = vijandY + 10;
+ vijandY = vijandY + 8;
 
   if (vijandY > 720) {
     vijandY = 0;
-  }
+  };
 
-  if (vijandY < 1)
-  {vijandX = random(100, 700)
+  if (vijandY < 1) {
+    vijandX = random(100, 700)
   };
   // kogel
 };
@@ -169,7 +170,14 @@ vijandY = vijandY + 10;
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-
+if (vijandX - spelerX < 50 &&
+    vijandX - spelerX > - 50 &&
+    vijandY - spelerY < 75 &&
+    vijandY - spelerY > - 75
+  ) {
+    console.log("botsing");
+    HP = HP-1;
+  }
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -213,9 +221,8 @@ var tekenAlles = function () {
 
   
   // vijand
-
   fill("red");
-  ellipse(300, 25, 25, 25)
+  ellipse(vijandX - 25, vijandY - 25, 25, 25)
   // speler
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 100);
@@ -223,10 +230,15 @@ var tekenAlles = function () {
   fill("black");
   ellipse(spelerX, spelerY + 75, 10, 10);
   
-  // punten en health
+  // health
   /*
   fill("yellow");
   ellipse( 500, 400, 20, 20); */   
+
+  // HP
+  fill("black");
+  textSize(30);
+  text("Health is "+ HP, 30, 30);
 };
 
 /**
@@ -234,14 +246,22 @@ var tekenAlles = function () {
  * anders return false
  */
 var checkGameOver = function () {
-   if (spelerY > 650) { 
-   console.log ("botsing")
-   return true;
+  var gameoverStatus = false;
+  if (spelerY > 650) { 
+    console.log ("de vloer is lava en ik sta erop");
+    gameoverStatus = true;
+  }
+  if (HP < 1) {
+    console.log ("tegen vijand");
+    gameoverStatus = true;
+  }
+  return gameoverStatus;
 }
-  // check of HP 0 is , of tijd op is, of ...
-  return false;
-};
 
+  
+  // check of HP 0 is , of tijd op is, of ...
+
+   
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
 /* ********************************************* */
@@ -256,6 +276,8 @@ function preload() {
     img_lijst[i] = loadImage(img_namenlijst[i]);
   }
 }
+
+
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -288,8 +310,7 @@ function draw() {
      console.log("game over")
      image(img_lijst[0],0,0, 1280, 720);
     if(keyIsDown(R)) {
-      spelerX = 25;
-      spelerY = 500;
+    
       spelStatus = UITLEG;
     }
   }
@@ -298,7 +319,9 @@ function draw() {
      console.log("uitleg")
     image(img_lijst[1],0,0, 1280, 720)
     if(keyIsDown(enter)){
-     spelerX = 30;
+      // resetGame
+      spelerX = 30;
+      HP = 10;
      spelStatus = SPELEN;
   }
 }

@@ -35,7 +35,7 @@ var spelerY = 525; // y-positie van speler
 var spelerSpringt = false;
 var snelheid = 10; 
 
-var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
+var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
 var HP = 25;
@@ -348,7 +348,7 @@ function draw() {
     // teken game-over scherm zwart
      console.log("game over")
      image(img_lijst[0],0,0, 1280, 720);
-    if(keyIsDown(R)) {
+     if(keyIsDown(R)) {
     
       spelStatus = UITLEG;
     }
@@ -356,7 +356,7 @@ function draw() {
   if (spelStatus === UITLEG) {
     // teken uitleg scherm zwart
      console.log("uitleg")
-    image(img_lijst[1],0,0, 1280, 720)
+     image(img_lijst[1],0,0, 1280, 720)
     if(keyIsDown(enter)){
       // resetGame
       spelerX = 30;
@@ -365,11 +365,10 @@ function draw() {
   }
 }
 
-    if (spelStatus === GEWONNEN) {
-    console.log("gewonnen")
-    fill('blue')
-    rect(0, 0, 1280, 720)
-      if(keyIsDown(O)){
+  if (spelStatus === GEWONNEN) {
+     console.log("gewonnen")
+     image(img_lijst[2],0,0, 1280, 720)
+    if(keyIsDown(O)){
         spelStatus = UITLEG;
       }
   }

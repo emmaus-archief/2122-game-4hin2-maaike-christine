@@ -23,7 +23,7 @@ const beweegrechts = 68;
 const spatiebalk = 32;
 const R = 82;
 const enter = 13;
-
+const O = 79;
 
 var vijandX = 600;
 var vijandY = 200;
@@ -285,16 +285,16 @@ var checkGameOver = function () {
   return gameoverStatus;
 }
 
-/*
+
   var checkGewonnen = function () {
-  var checkGewonnen = false
+  var gewonnenStatus = false
   if (spelerX > 1280) { 
     console.log ("Je hebt gewonnen");
     gewonnenStatus = true;
  }
   return gewonnenStatus;
 }
-*/
+
   // check of HP 0 is , of tijd op is, of ...
 
    
@@ -339,11 +339,9 @@ function draw() {
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
     }
-    /*
       if (checkGewonnen()) {
       spelStatus = GEWONNEN;
     }
-    */
   }
   
   if (spelStatus === GAMEOVER) {
@@ -366,12 +364,14 @@ function draw() {
      spelStatus = SPELEN;
   }
 }
-}
 
-  /*
-    if (spelstatus === GEWONNEN) {
+    if (spelStatus === GEWONNEN) {
     console.log("gewonnen")
-    fill(blue)
+    fill('blue')
     rect(0, 0, 1280, 720)
+      if(keyIsDown(O)){
+        spelStatus = UITLEG;
+      }
   }
-*/
+  
+}

@@ -25,6 +25,8 @@ const enter = 13;
 
 var vijandX = 600;
 var vijandY = 200;
+var vijandX2 = 800;
+var vijandY2 = 500;
 var spelerX = 30; // x-positie van speler
 var spelerY = 525; // y-positie van speler
 
@@ -34,7 +36,7 @@ var snelheid = 10;
 var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.jpeg']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
-var HP = 10;
+var HP = 25;
 
 //gras platform
 platform1X = 0;
@@ -85,7 +87,7 @@ var beweegAlles = function () {
 
   // speler springen
 if (spelerSpringt === false && keyIsDown(32)) { // spatie
-    snelheid = 6; 
+    snelheid = 5.2; 
     spelerSpringt = true;
 }
 if (spelerSpringt === true) {
@@ -160,7 +162,17 @@ if (spelerSpringt === true &&
   if (vijandY < 1) {
     vijandX = random(100, 700)
   };
-  // kogel
+  
+ vijandY2 = vijandY2 + 8;
+
+  if (vijandY2 > 720) {
+    vijandY2 = 0;
+  };
+
+  if (vijandY2 < 1) {
+    vijandX2 = random(100, 700)
+  };  
+  
 };
 
 /**
@@ -178,7 +190,15 @@ if (vijandX - spelerX < 50 &&
     console.log("botsing");
     HP = HP-1;
   }
-  // botsing kogel tegen vijand
+  
+if (vijandX2 - spelerX < 50 &&
+    vijandX2 - spelerX > - 50 &&
+    vijandY2 - spelerY < 75 &&
+    vijandY2 - spelerY > - 75
+  ) {
+    console.log("botsing");
+    HP = HP-1;
+  }
 
   // update punten en health
 
@@ -220,9 +240,14 @@ var tekenAlles = function () {
   rect(platform7X, platform7Y, platform1W, 30); // groen
 
   
-  // vijand
+  // vijanden
   fill("red");
   ellipse(vijandX - 25, vijandY - 25, 25, 25)
+
+  
+  fill("red");
+  ellipse(vijandX2 - 25, vijandY2 - 25, 25, 25)
+  
   // speler
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 100);
@@ -321,7 +346,7 @@ function draw() {
     if(keyIsDown(enter)){
       // resetGame
       spelerX = 30;
-      HP = 10;
+      HP = 25;
      spelStatus = SPELEN;
   }
 }

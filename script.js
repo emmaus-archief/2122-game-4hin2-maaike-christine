@@ -94,7 +94,7 @@ if (spelerSpringt === false && keyIsDown(32)) { // spatie
 }
 if (spelerSpringt === true) {
   spelerY = spelerY - snelheid;
-  snelheid = snelheid - 0.15;
+  snelheid = snelheid - 0.11;
 }
   // stopt springen
 if (spelerSpringt === true && 
@@ -244,11 +244,11 @@ var tekenAlles = function () {
   
   // vijanden
   fill("red");
-  ellipse(vijandX - 25, vijandY - 25, 25, 25)
+  ellipse(vijandX - 25, vijandY - 25, 30, 30)
 
   
   fill("red");
-  ellipse(vijandX2 - 25, vijandY2 - 25, 25, 25)
+  ellipse(vijandX2 - 25, vijandY2 - 25, 30, 30)
   
   // speler
   fill("white");

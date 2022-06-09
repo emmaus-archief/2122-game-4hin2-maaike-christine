@@ -40,31 +40,31 @@ var img_lijst =[]; // wordt gevuld in preload()
 
 var HP = 25;
 
-//gras platform
+// gras platform
 platform1X = 0;
 platform1Y = 600;
 platform1W = 150;
 platform1H = 125;
 
-//grijze platformen
-platform2X = 300;
-platform2Y = 500;
+// grijze platformen
+platform2X = 400;
+platform2Y = 650;
 platform2W = 110;
 platform2H = 20;
 
-platform3X = 400;
-platform3Y = 400;
+platform3X = 700;
+platform3Y = 570;
 
-platform4X = 565;
-platform4Y = 300;
+platform4X = 920;
+platform4Y = 480;
 
-platform5X = 750;
-platform5Y = 400;
+platform5X = 590;
+platform5Y = 390;
 
 platform6X = 850;
-platform6Y = 500;
+platform6Y = 300;
 
-//gras platform
+// gras platform
 platform7X = 1130;
 platform7Y = 200;
 platform7W = 150;
@@ -95,7 +95,7 @@ if (spelerSpringt === false && keyIsDown(32)) { // spatie
 }
 if (spelerSpringt === true) {
     spelerY = spelerY - snelheid;
-    snelheid = snelheid - 0.1;
+    snelheid = snelheid - 0.18;
 }
   // stopt springen
 if (spelerSpringt === true && 
@@ -221,7 +221,8 @@ if (spelerX < 25) {
   spelerX = spelerX + 10;
 }
   
-if (spelerX > 1105 && spelerY > 230) {
+if (spelerX > platform7X - 20 && 
+    spelerY > platform7Y + 30) {
   spelerX = spelerX - 10;
 }    
 

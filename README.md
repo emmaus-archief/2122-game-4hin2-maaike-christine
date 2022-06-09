@@ -29,7 +29,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] 9. ondergrond van het level tekenen
 - [x] 10. achtergrond tekenen
 - [x] 11. zorg dat de speler kan springen
-- voeg gravity toe
+- voeg gravity toe 
 - zorg dat hij niet verder valt dan het platform, maar er op blijft
 - lukt niet om van platform af te gaan als eenmaal geland
 - [x] 12. maak de finish werkend

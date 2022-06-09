@@ -37,7 +37,7 @@ var spelerY = 525; // y-positie van speler
 var spelerSpringt = false;
 var snelheid = 10; 
 
-var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG', 'img/finish.jpeg', 'img/vuurbal.png', 'img/lucht.png']; // plaatjes
+var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG', 'img/finish.jpeg', 'img/vuurbal.png', 'img/lucht.png', 'img/stenenplatform.jpeg']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
 var HP = 25;
@@ -245,19 +245,19 @@ var tekenAlles = function () {
 
   // grijze platformen
   fill(131, 139, 131);
-  rect(platform2X, platform2Y, platform2W, platform2H);
+  image(img_lijst[6], platform2X, platform2Y, platform2W, platform2H);
 
   fill(131, 139, 131);
-  rect(platform3X, platform3Y, platform2W, platform2H);
+  image(img_lijst[6], platform3X, platform3Y, platform2W, platform2H);
   
   fill(131, 139, 131);
-  rect(platform4X, platform4Y, platform2W, platform2H);
+  image(img_lijst[6], platform4X, platform4Y, platform2W, platform2H);
   
   fill(131, 139, 131);
-  rect(platform5X, platform5Y, platform2W, platform2H);
+  image(img_lijst[6], platform5X, platform5Y, platform2W, platform2H);
 
   fill(131, 139, 131);
-  rect(platform6X, platform6Y, platform2W, platform2H);
+  image(img_lijst[6],platform6X, platform6Y, platform2W, platform2H);
 
   fill(119, 79, 39); //bruin
   rect(platform7X, platform7Y, platform7W, platform7H);
@@ -284,7 +284,7 @@ var tekenAlles = function () {
 
   // HP
   fill("black");
-  textSize(35);
+  textSize(40);
   text("health is "+ HP, 30, 30);
 };
 

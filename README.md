@@ -6,7 +6,7 @@ Gemaakt door:
 - *Christine van den Heuvel*
 
 ### Beschrijving
-*korte beschrijving van het spel, wat je kunt doen in het spel, wat het doel is*
+*probeer aan de overkant te komen zonder af te gaan door de rode vuurballen*
 
 ## Mijn planning
 Werk de planning af van boven naar beneden<br>

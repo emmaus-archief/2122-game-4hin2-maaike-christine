@@ -27,6 +27,8 @@ const O = 79;
 
 var vijandX = 100;
 var vijandY = 200;
+var vijandW = 50;
+var vijandH = 50;
 var vijandX2 = 1080;
 var vijandY2 = 500;
 var spelerX = 30; // x-positie van speler
@@ -35,7 +37,7 @@ var spelerY = 525; // y-positie van speler
 var spelerSpringt = false;
 var snelheid = 10; 
 
-var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG', 'img/finish.jpeg']; // plaatjes
+var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG', 'img/finish.jpeg', 'img/vuurbal.png', 'img/lucht.png']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
 var HP = 25;
@@ -233,8 +235,7 @@ if (spelerX > platform7X - 20 &&
  */
 var tekenAlles = function () {
   // achtergrond
-  fill(178, 217, 255);
-  rect(0,0,1280,720);
+  image(img_lijst[5],0,0, 1280, 720)
   
   // platform
   fill(119, 79, 39); //bruin
@@ -263,14 +264,11 @@ var tekenAlles = function () {
   fill(79, 107, 24);
   image(img_lijst[3], platform7X, platform7Y, platform7W, 30); // groen
 
-  
   // vijanden
-  fill("red");
-  ellipse(vijandX - 25, vijandY - 25, 30, 30)
-
+  image(img_lijst[4], vijandX - 25, vijandY - 25, vijandW, vijandH)
   
-  fill("red");
-  ellipse(vijandX2 - 25, vijandY2 - 25, 30, 30)
+  image(img_lijst[4], vijandX2 - 25, vijandY2 - 25, vijandW, 
+  vijandH)
   
   // speler
   fill("white");

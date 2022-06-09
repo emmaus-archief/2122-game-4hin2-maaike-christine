@@ -35,7 +35,7 @@ var spelerY = 525; // y-positie van speler
 var spelerSpringt = false;
 var snelheid = 10; 
 
-var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG']; // plaatjes
+var img_namenlijst = ['img/gameover.PNG', 'img/uitleg.PNG', 'img/youwon.PNG', 'img/finish.jpeg']; // plaatjes
 var img_lijst =[]; // wordt gevuld in preload()
 
 var HP = 25;
@@ -49,17 +49,17 @@ platform1H = 125;
 //grijze platformen
 platform2X = 300;
 platform2Y = 500;
-platform2W = 125;
+platform2W = 110;
 platform2H = 20;
 
 platform3X = 400;
-platform3Y = 390;
+platform3Y = 400;
 
 platform4X = 565;
-platform4Y = 290;
+platform4Y = 300;
 
 platform5X = 750;
-platform5Y = 390;
+platform5Y = 400;
 
 platform6X = 850;
 platform6Y = 500;
@@ -90,12 +90,12 @@ var beweegAlles = function () {
 
   // speler springen
 if (spelerSpringt === false && keyIsDown(32)) { // spatie
-    snelheid = 5.2; 
+    snelheid = 5; 
     spelerSpringt = true;
 }
 if (spelerSpringt === true) {
     spelerY = spelerY - snelheid;
-    snelheid = snelheid - 0.11;
+    snelheid = snelheid - 0.1;
 }
   // stopt springen
 if (spelerSpringt === true && 
@@ -176,7 +176,7 @@ if (spelerSpringt === true &&
   };
 
   if (vijandY < 1) {
-      vijandX = random(100, 700)
+      vijandX = random(100, 1100)
   };
   
   vijandY2 = vijandY2 + 8;
@@ -186,7 +186,7 @@ if (spelerSpringt === true &&
   };
 
   if (vijandY2 < 1) {
-      vijandX2 = random(100, 700)
+      vijandX2 = random(100, 1100)
   };  
   
 };
@@ -216,7 +216,14 @@ if (vijandX2 - spelerX < 50 &&
     HP = HP-1;
   }
 
-  // update punten en health
+  // gaat niet van de game af
+if (spelerX < 25) {
+  spelerX = spelerX + 10;
+}
+  
+if (spelerX > 1105 && spelerY > 230) {
+  spelerX = spelerX - 10;
+}    
 
 };
 
@@ -253,7 +260,7 @@ var tekenAlles = function () {
   fill(119, 79, 39); //bruin
   rect(platform7X, platform7Y, platform7W, platform7H);
   fill(79, 107, 24);
-  rect(platform7X, platform7Y, platform7W, 30); // groen
+  image(img_lijst[3], platform7X, platform7Y, platform7W, 30); // groen
 
   
   // vijanden
@@ -374,6 +381,7 @@ function draw() {
     if(keyIsDown(enter)){
       // reset game
       spelerX = 30;
+      spelerY = 525;
       HP = 25;
      spelStatus = SPELEN;
   }

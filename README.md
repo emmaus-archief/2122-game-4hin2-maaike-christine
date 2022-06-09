@@ -21,25 +21,24 @@ Basis: uitleg, spelen, afgaan en punten
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
-- [x] 4.
-  *(pas de volgende stappen in de planning zelf aan)*
-- [x] x. iets wat je kan verzamelen tekenen
-- [x] x. teken platform
-- [x] x. teken vijand
+- [x] 5. iets wat je kan verzamelen tekenen
+- [x] 6. teken platform
+- [x] 7. teken vijand
 - dingen die uit de lucht vallen
-- [ ] x. teken finish
-- [x] x. ondergrond van het level tekenen
-- [x] x. achtergrond tekenen
-- [x] x. zorg dat de speler kan springen
+- [x] 8. teken finish
+- [x] 9. ondergrond van het level tekenen
+- [x] 10. achtergrond tekenen
+- [x] 11. zorg dat de speler kan springen
 - voeg gravity toe
 - zorg dat hij niet verder valt dan het platform, maar er op blijft
-- [x] x. maak de finish werkend
-- [x] x. maak een "you won" scherm
-- [x] x. maak uitlegscherm
-- [ ] x. kleuren toevoegen
-- [x] x. zorgen dat je af kan gaan
-- [x] x. game over
-- [ ] x. een nieuwe draw function zodat het nieuwe level getekend wordt
+- lukt niet om van platform af te gaan als eenmaal geland
+- [x] 12. maak de finish werkend
+- [x] 13. maak een "you won" scherm
+- [x] 14. maak uitlegscherm
+- [x] 15. kleuren toevoegen
+- [x] 16. zorgen dat je af kan gaan
+- [x] 17. game over
+- [ ] 18. een nieuwe draw function zodat het nieuwe level getekend wordt
 
 Mogelijk:
 

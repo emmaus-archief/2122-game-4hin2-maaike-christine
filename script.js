@@ -43,7 +43,7 @@ var HP = 25;
 //gras platform
 platform1X = 0;
 platform1Y = 600;
-platform1W = 200;
+platform1W = 150;
 platform1H = 125;
 
 //grijze platformen
@@ -65,8 +65,10 @@ platform6X = 850;
 platform6Y = 500;
 
 //gras platform
-platform7X = 1080;
-platform7Y = 600;
+platform7X = 1130;
+platform7Y = 200;
+platform7W = 150;
+platform7H = 750;
 
 
 /* ********************************************* */
@@ -249,9 +251,9 @@ var tekenAlles = function () {
   rect(platform6X, platform6Y, platform2W, platform2H);
 
   fill(119, 79, 39); //bruin
-  rect(platform7X, platform7Y, platform1W, platform1H);
+  rect(platform7X, platform7Y, platform7W, platform7H);
   fill(79, 107, 24);
-  rect(platform7X, platform7Y, platform1W, 30); // groen
+  rect(platform7X, platform7Y, platform7W, 30); // groen
 
   
   // vijanden
@@ -300,7 +302,7 @@ var checkGameOver = function () {
 
   var checkGewonnen = function () {
   var gewonnenStatus = false
-  if (spelerX > 1280) { 
+  if (spelerX > 1280 && spelerY < 200) { 
     console.log ("Je hebt gewonnen");
     gewonnenStatus = true;
  }

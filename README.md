@@ -26,8 +26,8 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] x. iets wat je kan verzamelen tekenen
 - [x] x. teken platform
 - [x] x. teken vijand
-- miss dingen die uit de lucht vallen
-- [] x. teken finish
+- dingen die uit de lucht vallen
+- [ ] x. teken finish
 - [x] x. ondergrond van het level tekenen
 - [x] x. achtergrond tekenen
 - [x] x. zorg dat de speler kan springen

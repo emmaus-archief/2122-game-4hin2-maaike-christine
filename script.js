@@ -25,9 +25,9 @@ const R = 82;
 const enter = 13;
 const O = 79;
 
-var vijandX = 600;
+var vijandX = 100;
 var vijandY = 200;
-var vijandX2 = 800;
+var vijandX2 = 1080;
 var vijandY2 = 500;
 var spelerX = 30; // x-positie van speler
 var spelerY = 525; // y-positie van speler
@@ -45,12 +45,12 @@ platform1X = 0;
 platform1Y = 600;
 platform1W = 200;
 platform1H = 125;
-//grijze
+
+//grijze platformen
 platform2X = 300;
 platform2Y = 500;
 platform2W = 125;
 platform2H = 20;
-
 
 platform3X = 400;
 platform3Y = 390;
@@ -63,11 +63,10 @@ platform5Y = 390;
 
 platform6X = 850;
 platform6Y = 500;
+
 //gras platform
 platform7X = 1080;
 platform7Y = 600;
-
- 
 
 
 /* ********************************************* */
@@ -80,11 +79,11 @@ platform7Y = 600;
 var beweegAlles = function () {
   // speler lopen
   if(keyIsDown(beweeglinks)){
-   spelerX = spelerX - 10;
+     spelerX = spelerX - 10;
   }
 
   if(keyIsDown(beweegrechts)){
-    spelerX = spelerX + 10;
+     spelerX = spelerX + 10;
   }
 
   // speler springen
@@ -93,86 +92,99 @@ if (spelerSpringt === false && keyIsDown(32)) { // spatie
     spelerSpringt = true;
 }
 if (spelerSpringt === true) {
-  spelerY = spelerY - snelheid;
-  snelheid = snelheid - 0.11;
+    spelerY = spelerY - snelheid;
+    snelheid = snelheid - 0.11;
 }
   // stopt springen
 if (spelerSpringt === true && 
-      spelerY > platform1Y - 75 && spelerY < platform1Y + 125  && 
-      spelerX > platform1X && spelerX < platform1X + 200) {
-    spelerSpringt = false;
-    spelerY = platform1Y - 75; // zet speler bovenop platform
+      spelerY > platform1Y - 75 && 
+      spelerY < platform1Y + 125  && 
+      spelerX > platform1X && 
+      spelerX < platform1X + 200) {
+      spelerSpringt = false;
+      spelerY = platform1Y - 75; // zet speler bovenop platform
 
   }
   
   if (spelerSpringt === true && 
-      spelerY > platform2Y - 75 && spelerY < platform2Y - 55 && 
-      spelerX > platform2X && spelerX < platform2X + 125) {
-    spelerSpringt = false;
-    spelerY = platform2Y - 75; // zet speler bovenop platform
+      spelerY > platform2Y - 75 && 
+      spelerY < platform2Y - 55 && 
+      spelerX > platform2X && 
+      spelerX < platform2X + 125) {
+      spelerSpringt = false;
+      spelerY = platform2Y - 75; // zet speler bovenop platform
 
   }
 
   if (spelerSpringt === true && 
-      spelerY > platform3Y - 75 && spelerY < platform3Y - 55 && 
-      spelerX > platform3X && spelerX < platform3X + 125) {
-    spelerSpringt = false;
-    spelerY = platform3Y - 75; // zet speler bovenop platform
+      spelerY > platform3Y - 75 && 
+      spelerY < platform3Y - 55 && 
+      spelerX > platform3X && 
+      spelerX < platform3X + 125) {
+      spelerSpringt = false;
+      spelerY = platform3Y - 75; // zet speler bovenop platform
 
   }
 
   if (spelerSpringt === true && 
-      spelerY > platform4Y - 75 && spelerY < platform4Y - 55 && 
-      spelerX > platform4X && spelerX < platform4X + 125) {
-    spelerSpringt = false;
-    spelerY = platform4Y - 75; // zet speler bovenop platform
+      spelerY > platform4Y - 75 && 
+      spelerY < platform4Y - 55 && 
+      spelerX > platform4X && 
+      spelerX < platform4X + 125) {
+      spelerSpringt = false;
+      spelerY = platform4Y - 75; // zet speler bovenop platform
 
   }
 
   if (spelerSpringt === true && 
-      spelerY > platform5Y - 75 && spelerY < platform5Y - 55 && 
-      spelerX > platform5X && spelerX < platform5X + 125) {
-    spelerSpringt = false;
-    spelerY = platform5Y - 75; // zet speler bovenop platform
+      spelerY > platform5Y - 75 && 
+      spelerY < platform5Y - 55 && 
+      spelerX > platform5X && 
+      spelerX < platform5X + 125) {
+      spelerSpringt = false;
+      spelerY = platform5Y - 75; // zet speler bovenop platform
 
   }
 
   if (spelerSpringt === true && 
-      spelerY > platform6Y - 75 && spelerY < platform6Y - 55 && 
-      spelerX > platform6X && spelerX < platform6X + 125) {
-    spelerSpringt = false;
-    spelerY = platform6Y - 75; // zet speler bovenop platform
+      spelerY > platform6Y - 75 && 
+      spelerY < platform6Y - 55 && 
+      spelerX > platform6X && 
+      spelerX < platform6X + 125) {
+      spelerSpringt = false;
+      spelerY = platform6Y - 75; // zet speler bovenop platform
 
   }
 
   if (spelerSpringt === true && 
-      spelerY > platform7Y - 75 && spelerY < platform7Y + 125 && 
-      spelerX > platform7X && spelerX < platform7X + 200) {
-    spelerSpringt = false;
-    spelerY = platform7Y - 75; // zet speler bovenop platform
+      spelerY > platform7Y - 75 && 
+      spelerY < platform7Y + 125 && 
+      spelerX > platform7X && 
+      spelerX < platform7X + 200) {
+      spelerSpringt = false;
+      spelerY = platform7Y - 75; // zet speler bovenop platform
 
   }
   
   // vijand
-
- vijandY = vijandY + 8;
+  vijandY = vijandY + 8;
 
   if (vijandY > 720) {
-    vijandY = 0;
+      vijandY = 0;
   };
 
   if (vijandY < 1) {
-    vijandX = random(100, 700)
+      vijandX = random(100, 700)
   };
   
- vijandY2 = vijandY2 + 8;
+  vijandY2 = vijandY2 + 8;
 
   if (vijandY2 > 720) {
-    vijandY2 = 0;
+      vijandY2 = 0;
   };
 
   if (vijandY2 < 1) {
-    vijandX2 = random(100, 700)
+      vijandX2 = random(100, 700)
   };  
   
 };
@@ -264,8 +276,8 @@ var tekenAlles = function () {
 
   // HP
   fill("black");
-  textSize(30);
-  text("Health is "+ HP, 30, 30);
+  textSize(35);
+  text("health is "+ HP, 30, 30);
 };
 
 /**
@@ -305,7 +317,7 @@ var checkGameOver = function () {
 /**
  * preload
  * deze functie wordt één keer uitgevoerd voor setup
- * hier laden we de plaatjes
+ * hier laden we de plaatjes met een array
  */
 function preload() {
   for (var i = 0; i < img_namenlijst.length; i++) {
@@ -345,7 +357,7 @@ function draw() {
   }
   
   if (spelStatus === GAMEOVER) {
-    // teken game-over scherm zwart
+    // teken game-over scherm 
      console.log("game over")
      image(img_lijst[0],0,0, 1280, 720);
      if(keyIsDown(R)) {
@@ -354,11 +366,11 @@ function draw() {
     }
   }
   if (spelStatus === UITLEG) {
-    // teken uitleg scherm zwart
+    // teken uitleg scherm 
      console.log("uitleg")
      image(img_lijst[1],0,0, 1280, 720)
     if(keyIsDown(enter)){
-      // resetGame
+      // reset game
       spelerX = 30;
       HP = 25;
      spelStatus = SPELEN;
@@ -366,9 +378,11 @@ function draw() {
 }
 
   if (spelStatus === GEWONNEN) {
+    // teken finish scherm
      console.log("gewonnen")
      image(img_lijst[2],0,0, 1280, 720)
     if(keyIsDown(O)){
+      // reset game
         spelStatus = UITLEG;
       }
   }
